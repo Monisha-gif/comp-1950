@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 	<meta name="Project Proposal" content="Meta Site listing team members and project deliverables">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>	
 	<link rel="stylesheet" href="css/stylesformeta.css">
+	<link rel="stylesheet" media="screen, print" href="css/slickmap.css" />
 <title>Project Meta Site</title>
 </head>
 	
@@ -21,16 +23,37 @@
 	<div id="intro">
 	<h2> Team Members</h2>
 	<h3 id="ML"> Matin Lotfaliei</h3>
-	<p id="MLintro"></p>
+	<p id="MLintro"> Matin is a software programmer who is starting his Master's degree at University of Victoria. Matin has contributed to the JavaScript coding for the navigation, print button, and the interactive layout of lectures. Matin also has contributed to the responsiveness of the layout and the site-map of the redesigned site. </p>
 	<h3 id="MR"> Monisha Ravindra</h3>
 	<p id="MRintro"> Monisha is a graphic designer and content writer on the path to learning web development. Monisha has contributed to the first draft of the content, HTML, and CSS layout. Monisha also has contributed to some of the ideas for rebuilding the existing COMP 1950 site to make it standards compliant. Monisha has acquired  decent intermediate level competencey in HTML5 and CSS, and has used this along with her graphic design skills.  </p>
 	<h3 id="AS"> Avreet Singh</h3>
 	<p id="ASintro"></p>
     </div>
-	<div id="infoArch">
-		<!--Matin will fill in-->
+	<div id="sitemap">
+		<h2> Site Map</h2>
+		<nav class="utilityNav">
+			<ul>				
+				<li><a href="/meta">Meta Site</a></li>
+				<li><a href="/search">Search</a></li>
+			</ul>
+		</nav>
+
+		<nav class="primaryNav">
+			<ul>
+				<li id="home"><a href="/home.html">Home</a></li>			
+				<li><a href="/about">About Us</a></li>
+				<li><a href="/lectures">Lectures</a>
+					<ul>
+						<li><a href="/lectures/01">Lecture 01: Tools and Standards</a></li>
+						<li><a href="/lectures/02">Lecture 02: HTML5</a></li>
+					</ul>
+				</li>
+				<li><a href="/resources">Resources</a></li>				
+			</ul>
+		</nav>
 	</div>
 	<div id="rationale">
+		<h2> Rationale</h2>
 		<p> These are the changes we incorporated into the <a href="#">prototype COMP 1950 site</a> and we recommend that the new build integrate all of these important features for the following reasons.</p>
 		<table id="ratTable">
 		<tr>
