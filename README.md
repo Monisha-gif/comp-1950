@@ -10,6 +10,10 @@ The colours used in the BCIT site are as follows:
 The font is Geogrotesque, but any sans-serif that looks like it will be okay.
 The about us/about page will have a 3X2 grid structure, similar to the card layout in the bcit website. I hope that the HTML is set up okay for this. There are 6 sections: Format, Evaluation, Course Curriculum, Requirements, Course Policies, and Administrative Trivia that will go into these cards. 
 
+The resources page will have one 3 col x 1 row grid for: Course Materials, Course Server, and Texts. 
+Then it will have under this, one 2 col x 1 row grid for Instructor Assitance and Validators. 
+The footer is the same on all pages, so is the nav and the header. 
+
 Uploaded home, about us and resources html files (basic with lorem ipsum). Avreet, please check and apply CSS.
 
 The lecture.html file is remaning. This is slightly different as will have Lecture 1 which will open on hover and show Lecture 1 (with lorem ipsum text) and then Lecture 2 which will also do the same. I will upload this one tomorrow morning by 11:00 am. Thank you. 
