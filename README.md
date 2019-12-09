@@ -40,7 +40,7 @@ Summary of what is remaining:
 
 I can make the 404 page
 
-Avreet, please let us know about CSS styles. I did not add a wrapper div for the entire contents of each page, but please feel free to modfiy the HTML as required. 
+Avreet, please let us know about CSS styles. I did not add a wrapper div for the entire contents of each page, but please feel free to modfiy the HTML as required. I also didn't know what exactly was needed for the lecture page (JavaScript wise), so it is basic.
 
 Thank you, please text me or email me whenever required,
 Monisha. 
