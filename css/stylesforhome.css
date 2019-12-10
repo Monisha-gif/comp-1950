@@ -1,0 +1,33 @@
+
+	/* styles for printers */
+	@media print { 
+	
+		header, nav, .site_map_link, #search_form{
+			display: none;}
+	
+		body, #content, main, footer  {
+			width: auto;
+			margin: 0;
+			padding: 0;
+			float: none;
+			background: none;
+			}
+		h2, h2, h4, h5, h6{ 	
+			page-break-after: avoid;
+	}
+	}
+	section, article{ 	page-break-before: always;	}
+	body, #content, , main, footer {
+		color: black;
+		background:none;
+		font: 16pt Georgia, "Times New Roman", Serif;
+	}
+	a:link, a:visited {
+			
+		/* if using color, make it dark! */	
+		color: #330099;
+		
+		/* make link text stand out */
+		text-decoration: underline;
+		font-weight: bold;	
+	}
