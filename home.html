@@ -1,27 +1,33 @@
 <!doctype html>
-<html lang="en"> <!--Home prototype page for COMP 1950 project. Matin Lotfaliei, Monisha Ravindra, and Avreet Singh-->
+<html lang="en"> <!--Home prototype page for COMP 1950 project. Matin Lotfaliei, Monisha Ravindra-->
 <head>
 <meta charset="UTF-8">
 <title>BCIT_COMP 1950 Course Homepage</title>
-	<meta name=" Home_COMP 1950" content="Web Development and Design 2 BCIT ">
+	<meta name=" Home_COMP 1950" content="Web Development and Design 2 BCIT Course Homepage">
+	<link rel="stylesheet" href="css/styles_1950.css">
+	<link rel="stylesheet" href="css/stylesforhome.css" media="print">
 	<script src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
 </head>
 
 <body>
+	<div id="wrap">
+		<div id="topbar"> </div> <!--this div is the top bar in the page in maroon #822c2c -->
 	<h1>COMP 1950 SIX-WEEK CLASS, MONDAYS AND WEDNESDAYS, DTC</h1>
-	<div id="topbar"> </div> <!--this div is the top bar in the page in maroon #822c2c -->
+	
+	
 	<div id ="shortcuts_panel"> 
 	<nav id="short_nav"> <ul>
 		<li id="about"> <a href="/about.html"> About COMP 1950</a></li>
 		<li id="lectures"> <a href="/lectures.html"> Lectures</a></li>
 		<li id="resources"> <a href="/resources.html"> Resources</a></li></ul></nav></div>
 	<div id="header_image1"> 
-						 <img src="images/header_01.jpg" alt="photograph of students at table">
+						 <img id="header1" src="images/header_01.jpg" alt="photograph of students at table">
+		<img id="logocard" src="images/bcit_logo_card.png" alt="logo of BCIT">
 						</div>
 																							  
 	<div id="search_field">
     <i class="fa fa-search search_icon"></i>
-    <input class="input-field" type="search" placeholder="Search COMP 1950" name="Search">
+    <input class="input-field" type="search" placeholder="Search course" name="Search">
 	  <input class="search-box" type="submit" value="Search">												
   </div>
 	<!-- this div is the grid container for the card layout with three cards, Registraton, About the Instructor and Course Prerequisites-->
@@ -42,9 +48,9 @@
 	<!--This div is the flex or grid container for the footer with the site map and the contact information, similar to the BCIT page-->
 	<div id="sitemap">
 		<ul id="footernav">
-		<li id="ftabout"> <a href="/about.html"> About COMP 1950</a> </li>
-		<li id="ftlectures"> <a href="/lectures.html"> Lectures</a> </li>
-		<li id="ftresources"> <a href="/resources.html"> Resources</a> </li></ul>
+		<li id="ftabout"> <a href="about.html"> About COMP 1950</a> </li>
+		<li id="ftlectures"> <a href="lectures.html"> Lectures</a> </li>
+		<li id="ftresources"> <a href="resources.html"> Resources</a> </li></ul>
 		<p id="footerinfo">
 		British Columbia Institute of Technology <br>
 			3700 Willingdon Avenue <br>
@@ -55,5 +61,6 @@
 	</p>
 	</div>
 	<footer> &copy; 2019 British Columbia Institute of Technology. All rights reserved.</footer>
+		</div>
 </body>
 </html>
