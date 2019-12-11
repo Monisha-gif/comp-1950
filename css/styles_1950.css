@@ -160,12 +160,13 @@ padding-right: 20px;}
 padding-right:20px;
 background-color:#EAEAEA;}
 
-#card_layout, #card_layout2 {
+#card_layout, #card_layout2, #card_layout3 {
 	padding-top:20px;
 	padding-bottom:20px;
 	display:grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-column-gap: 20px;
+	grid-row-gap: 20px;
 	background-color:#aaaaaa;
 }
 
@@ -177,9 +178,6 @@ padding-right: 20px;}
 padding-right:20px;
 background-color:#EAEAEA;}
 
-#card_layout3{margin-top:35px;
-	display:grid;
-grid-template-columns: 1fr 1fr 1fr;}
 #card32{color:white;
 background-color:#003c71;
 padding-left: 10px;
@@ -190,7 +188,11 @@ background-color:#EAEAEA;}
 
 #card_layout31{
 	display:grid;
-grid-template-columns: 1fr 1fr;}
+grid-template-columns: 1fr 1fr;
+grid-column-gap: 20px;
+padding-bottom:20px;
+	background-color:#aaaaaa;
+}
 
 #card34, #card35 {color:white;
 background-color:#003c71;
