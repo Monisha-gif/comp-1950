@@ -77,6 +77,7 @@ header #search_field {
 }
 
 #wrap h1 {
+	background-color:lightgray;
 	padding: 20px;
 	color: navy;
 	margin: 0;
@@ -86,6 +87,8 @@ header #search_field {
 
 main {
 	padding: 10px;
+	background-color:#ffffff;
+	min-height: 300px;
 }
 
 #header_image1 , #header1 {	

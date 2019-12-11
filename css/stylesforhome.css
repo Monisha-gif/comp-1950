@@ -18,7 +18,7 @@
 		:any-link:after {content: "(url:"attr(href)")"}
 	}
 	section, article{ 	page-break-before: always;	}
-	body, #content, , main, footer {
+	body, #content, main, footer {
 		color: black;
 		background:none;
 		font: 16pt Georgia, "Times New Roman", Serif;
