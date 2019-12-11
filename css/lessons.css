@@ -1,0 +1,37 @@
+/* Author: Matin Lotfaliei */
+
+h2 {
+    color: white;
+    background-color: blue;
+    transition: 0.5s;  
+    margin: 0;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid gray;
+    box-shadow: 5px 0px 5px gray;
+}
+
+h2:hover {
+    background-color: lightblue;
+}
+
+h2.visible {
+    background-color: orange;
+    color: black;
+}
+
+/* 
+I am using max-height for openning and hiding the lesson contents.
+Apparently, if you use the height, it would affect its children too.
+ */
+.content {
+    max-height: 0; 
+    transition: 1s;  
+    overflow: hidden;            
+}
+
+div.visible {    
+    border: 1px solid gray;
+    box-shadow: 5px 5px 5px gray;
+    padding: 5px;
+}
