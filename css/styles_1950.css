@@ -8,10 +8,11 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-body {font-family: 'Armata', sans-serif;
-background-color:#aaaaaa;
-font-size:.9em;
-margin: 0;
+body {
+	font-family: 'Armata', sans-serif;
+	background-color:#aaaaaa;
+	font-size:.9em;
+	margin: 0;
 }
 
 header {
@@ -173,18 +174,24 @@ header nav ul li a {
 header nav ul li a:hover {
 	font-weight: bold;
 }
-#card1 {padding-left:10px;
-padding-right:20px;
-background-color:#EAEAEA;}
+#card1 {
+	padding-left:10px;
+	padding-right:20px;
+	background-color:#EAEAEA;
+}
 
-#card2{color:white;
-background-color:#003c71;
-padding-left: 10px;
-padding-right: 20px;}
+#card2{
+	color:white;
+	background-color:#003c71;
+	padding-left: 10px;
+	padding-right: 20px;
+}
 
-#card3 {padding-left:30px;
-padding-right:20px;
-background-color:#EAEAEA;}
+#card3 {
+	padding-left:30px;
+	padding-right:20px;
+	background-color:#EAEAEA;
+}
 
 #card_layout, #card_layout2, #card_layout3 {
 	padding-top:20px;
@@ -196,41 +203,52 @@ background-color:#EAEAEA;}
 	background-color:#aaaaaa;
 }
 
-#card22, #card24, #card26 {color:white;
-background-color:#003c71;
-padding-left: 10px;
-padding-right: 20px;}
-#card21, #card23, #card25 {padding-left:30px;
-padding-right:20px;
-background-color:#EAEAEA;}
+#card22, #card24, #card26 {
+	color:white;
+	background-color:#003c71;
+	padding-left: 10px;
+	padding-right: 20px;
+}
+#card21, #card23, #card25 {
+	padding-left:30px;
+	padding-right:20px;
+	background-color:#EAEAEA;
+}
 
-#card32{color:white;
-background-color:#003c71;
-padding-left: 10px;
-padding-right: 20px;}
-#card31, #card33 {padding-left:30px;
-padding-right:20px;
-background-color:#EAEAEA;}
+#card32{
+	color:white;
+	background-color:#003c71;
+	padding-left: 10px;
+	padding-right: 20px;
+}
+#card31, #card33 {
+	padding-left:30px;
+	padding-right:20px;
+	background-color:#EAEAEA;
+}
 
 #card_layout31{
 	display:grid;
-grid-template-columns: 1fr 1fr;
-grid-column-gap: 20px;
-padding-bottom:20px;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 20px;
+	padding-bottom:20px;
 	background-color:#aaaaaa;
 }
 
-#card34, #card35 {color:white;
-background-color:#003c71;
-padding-left: 10px;
-padding-right: 20px;}
+#card34, #card35 {
+	color:white;
+	background-color:#003c71;
+	padding-left: 10px;
+	padding-right: 20px;
+}
 
-#sitemap {display:grid;
-grid-template-columns: 1fr 1fr;
-grid-column-gap: 250px;
-font-size:.9em;
-background-color: #727272;
-color:lightgray;
+#sitemap {
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 250px;
+	font-size:.9em;
+	background-color: #727272;
+	color:lightgray;
 }
 
 #footernav li {
@@ -246,9 +264,16 @@ color:lightgray;
 	font-weight: bold;
 }
 
-footer {background-color:#2d2d2d;
-color:lightgray;
-padding: 10px;
-font-size:.7em;
-text-align: center;}
+footer {
+	background-color:#2d2d2d;
+	color:lightgray;
+	padding: 10px;
+	font-size:.7em;
+	text-align: center;
+}
 
+@media print {
+	nav {
+		visibility: hidden;
+	}
+}

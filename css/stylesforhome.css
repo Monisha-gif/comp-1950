@@ -1,24 +1,26 @@
 
 	/* styles for printers contributed by Avreet Singh, modified by Monisha Ravindra*/
-	@media print { 
 	
-		#short_nav, #search_field, img {
-			display: none;}
-	
-		body, #content, main, footer  {
-			width: auto;
-			margin: 0;
-			padding: 0;
-			float: none;
-			background: none;
-			}
-		h2, h2, h4, h5, h6{ 	
-			page-break-after: avoid;
+	header #short_nav, header #search_field, header img {
+		display: none;}
+
+	body, #content, main, footer  {
+		width: auto;
+		margin: 0;
+		padding: 0;
+		float: none;
+		background: none;
+		}
+	h2, h2, h4, h5, h6{ 	
+		page-break-after: avoid;
 	}
-		:any-link:after {content: "(url:"attr(href)")"}
+	:any-link:after {content: "(url:"attr(href)")"}
+
+	div {
+		max-height: unset !important;
 	}
 	section, article{ 	page-break-before: always;	}
-	body, #content, main, footer {
+	body, #content, main, footer, #sitemap {
 		color: black;
 		background:none;
 		font: 16pt Georgia, "Times New Roman", Serif;
@@ -29,6 +31,6 @@
 		color: #330099;
 		
 		/* make link text stand out */
-		text-decoration: underline;
+		text-decoration: none;
 		font-weight: bold;	
 	}
