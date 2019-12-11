@@ -1,0 +1,100 @@
+@charset "UTF-8";
+/* CSS Document created by Matin Lotfaliei and Monisha Ravindra */
+@import url('https://fonts.googleapis.com/css?family=Armata&display=swap');
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {font-family: 'Armata', sans-serif;
+background-color:#aaaaaa;
+font-size:.9em;}
+h1 {font-size:1.3em;
+font-weight:700;
+	}
+
+#topbar {min-height: 50px;
+background-color:#822c2c;
+}
+#wrap {padding: 15px;
+background-color:#ffffff;
+width: 1024px;
+margin-left:auto;
+margin-right:auto;}
+.fa-search {color:#aaa;
+	margin-left:5px;
+margin-right:5px;
+align-self: center;}
+
+.search-box {background: #5d5d5d;
+  border: 0;
+  color: white;
+  padding: 2px;
+	font-size:.8em;
+  }
+
+li {list-style-type:none;}
+a:link {color:#003c71;
+}
+a:visited {color:#822c2c;}
+a:hover {font-weight: bold;}
+#card1 {padding-left:10px;
+padding-right:20px;
+background-color:#EAEAEA;}
+
+#card2{color:white;
+background-color:#003c71;
+padding-left: 10px;
+padding-right: 20px;}
+
+#card3 {padding-left:30px;
+padding-right:20px;
+background-color:#EAEAEA;}
+
+#card_layout {margin-top:35px;
+	display:grid;
+grid-template-columns: 1fr 1fr 1fr;}
+
+#card_layout2{margin-top:35px;
+	display:grid;
+grid-template-columns: 1fr 1fr 1fr;
+}
+#card22, #card24, #card26 {color:white;
+background-color:#003c71;
+padding-left: 10px;
+padding-right: 20px;}
+#card21, #card23, #card25 {padding-left:30px;
+padding-right:20px;
+background-color:#EAEAEA;}
+
+#card_layout3{margin-top:35px;
+	display:grid;
+grid-template-columns: 1fr 1fr 1fr;}
+#card32{color:white;
+background-color:#003c71;
+padding-left: 10px;
+padding-right: 20px;}
+#card31, #card33 {padding-left:30px;
+padding-right:20px;
+background-color:#EAEAEA;}
+
+#card_layout31{
+	display:grid;
+grid-template-columns: 1fr 1fr;}
+
+#card34, #card35 {color:white;
+background-color:#003c71;
+padding-left: 10px;
+padding-right: 20px;}
+
+#sitemap {display:grid;
+grid-template-columns: 1fr 1fr;
+grid-column-gap: 450px;
+font-size:.9em;}
+
+footer {color:#2d2d2d;
+margin-top:5px;
+font-size:.7em;
+text-align: center;}
+
