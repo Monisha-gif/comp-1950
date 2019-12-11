@@ -64,10 +64,25 @@ header #search_field {
 	color:lightgray;
 }
 #wrap {	
-background-color:#ffffff;
-width: 1024px;
-margin-left:auto;
-margin-right:auto;}
+	background-color:lightgray;
+	width: 1024px;
+	margin-left:auto;
+	margin-right:auto;
+	padding-top: 150px;
+}
+
+#wrap.home {
+	background-color:#ffffff;
+	padding:0;
+}
+
+#wrap h1 {
+	padding: 20px;
+	color: navy;
+	margin: 0;
+	font-weight: bold;
+	font-size: 20px;
+}
 
 main {
 	padding: 10px;
