@@ -32,7 +32,7 @@ Options All +Indexes
 # ErrorDocument <errorNumber> <path>
 # Note: use a server-root based path here
 
-ErrorDocument 404 /students/
+ErrorDocument 404 /page_not_404.html
 # AddType and AddHandler can be instructed to parse .html files as .php
 AddType application/x-httpd-php .html
 AddHandler application/x-httpd-php .html

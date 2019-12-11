@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* CSS Document created by Matin Lotfaliei and Monisha Ravindra */
+@import url('normalize.css');
 @import url('https://fonts.googleapis.com/css?family=Armata&display=swap');
 html {
   box-sizing: border-box;
