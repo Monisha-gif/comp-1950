@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="en">
+<!--Lesson 1 prototype page for COMP 1950 project. Matin Lotfaliei, Monisha Ravindra, and Avreet Singh-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>BCIT_COMP 1950 Course - Lesson 02</title>
+    <meta name=" COMP_L02 1950" content="Web Development and Design 2 BCIT - Lesson 02">    
+
+    <script src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../../js/lessions.js"></script>
+
+    <link href="../../css/lessons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles_1950.css">
+	<link rel="stylesheet" href="../../css/stylesforhome.css" media="print">
+</head>
+
+<body>
+	<!--this div is the top bar in the page in maroon #822c2c -->
+	<div id="topbar">BRITISH COLOMBIA INSTITUDE OF TECHNOLOGY</div>
+	<header>			
+			<h1>COMP 1950 SIX-WEEK CLASS,<br>MONDAYS AND WEDNESDAYS, DTC</h1>
+			
+			<nav id="short_nav">
+				<ul>
+					<li> <a href="../../home.html">Home</a></li>					
+					<li id="lectures">
+							<a href="#">Lectures</a>
+							<ul id="subnav">						
+								<li><a href="../../lectures/01/">01: Tools &amp; Standards</a></li>
+								<li><a href="../../lectures/02/">02: HTML5</a></li>
+								<li><a href="../../lectures/03/">03: Advanced CSS</a></li>
+								<li><a href="../../lectures/04/">04: CSS Layouts</a></li>
+								<li><a href="../../lectures/05/">05: Responsive Design</a></li>
+								<li><a href="../../lectures/06/">06: CSS3</a></li>
+								<li><a href="../../lectures/07/">07: Javascript Frameworks</a></li>
+								<li><a href="../../lectures/08/">08: Server Architecture</a></li>
+								<li><a href="../../lectures/09/">09: Templates, Tools</a></li>
+								<li><a href="../../lectures/10/">10: Methodology</a></li>
+							</ul>
+						</li>
+					<li id="resources"> <a href="../../resources.html">Resources</a></li>
+					<li id="about"> <a href="../../about.html">About COMP 1950</a></li>
+				</ul>
+			</nav>			
+			<img id="header_logo" src="../../images/bcit_logo.png" alt="logo of BCIT">			
+
+			<div id="search_field">
+				<i class="fa fa-search search_icon"></i>
+				<input class="input-field" type="search" placeholder="Search course" name="Search">
+				<input class="search-box" type="submit" value="Search">
+			</div>
+	</header>
+	<div id="wrap">	
+		<h1>Lecture 2: HTML5</h1>	
+
+        <main>                
+                <h2>Agenda</h2>
+                        <div class="contblock">
+                            <ul>	
+                                <li>Quiz #1</li>
+                                <li><a href="#charset">Charsets</a></li>
+                                <li><a href="#html">HTML</a>, <a href="#xhtml">XHTML</a>, <a href="#html5">HTML5</a></li>
+                                <li><a href="#semantics">Semantics</a></li>
+                                <li><a href="#forms">Forms</a>, <a href="#svg">SVG</a>, <a href="#multimedia">Multimedia</a></li>	
+                                <li><a href="#todo">To Do</a></li>				
+                            </ul>
+                        </div>
+                
+                    <h2 id="charset">Character Sets And Languages</h2>
+                    <div class="contblock">
+                        <p>The W3C recommends the <a href="https://www.w3.org/International/questions/qa-choosing-encodings">UTF-8 charset</a> for web development. It includes an impressive array of languages and special characters, and is well supported in common devices.</p>
+                        
+                        <h3>Assign Character Set</h3>
+                        <p>If it is not specified, a web browser will choose the character set it thinks is most appropriate, but it is a better practice for the developer to ensure the correct character set by applying the <code>meta</code> tag to the <code>head</code> section of every HTML page:</p>
+                        
+                        <pre><code>&lt;meta charset="utf-8" /&gt;</code></pre>
+                        
+                        <ul>
+                            <li>Write all your text-based code (<code>.html</code>, <code>.css</code>, <code>.js</code>, <code>.php</code>, etc) in UTF-8. At development time, ensure your text editor is saving files in this format. This setting is usually found in the application's Preferences menu option.</li>
+                            <li>Unless your audience includes very old browsers, you can <a href="https://tools.oratory.com/altcodes.html">code special characters</a> directly into the HTML (you dont need to use HTML entities for most special characters).</li>
+                            <li>You cannot copy-paste rich text (such as Microsoft Word, or WordPad) into your HTML. The rich text formatting may result in an unreadable mess.</li>
+                            <li>An HTTP server can over-ride your charset preferences when it generates the HTTP header. Details on how to control this will be discussed later in this course.</li>
+                        </ul>		
+                        
+                        <h3>HTML <code>lang</code> Attribute</h3>
+                        <p>Use the <code>lang=""</code> attribute to <a href="https://www.w3.org/International/questions/qa-html-language-declarations">declare the language in HTML</a>. This is usually applied to the <code>html</code> element. Assigning the appropriate language code will apply to all contained content, unless over-ridden with another <code>lang=""</code>.</p>	
+                        
+                        <p>Use the language abbreviations  from the <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php">standard ISO 639-1</a> code set (don't use ISO 639-2).</p>
+                                
+                    <textarea style="width:90%;height:230px;" rows="10" cols="50">&lt;!DOCTYPE html&gt;
+                &lt;html lang="en"&gt;
+                    &lt;head&gt;	&lt;title&gt;&lt;/title&gt;	&lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;p&gt;English, english, english&lt;/p&gt;
+                        &lt;div lang="fr"&gt;
+                            &lt;p&gt;Français, français, français&lt;/p&gt;
+                            &lt;p lang="es"&gt;Español&lt;/p&gt;
+                            &lt;p lang="ar"&gt;العربية&lt;/p&gt;			
+                            &lt;p&gt;Français, français, français&lt;/p&gt;
+                            &lt;p&gt;Français, français, français&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;p&gt;English, english, english&lt;/p&gt;
+                    &lt;/body&gt;
+                &lt;/html&gt;
+                </textarea>	
+                        
+                    </div>
+                <h2 id="html">HTML</h2>
+                <div class="contblock">
+                <p>What started as a language defined by <a href="http://www.w3.org/MarkUp/SGML/">SGML</a> <em>(Standard Generalized Markup Language)</em>, HTML is used to mark up billions of pages, making up the bulk of the web.</p>
+                
+                    <ul>
+                        <li>Late 1991, Tim Berners-Lee releases the first iteration of what would become HTML 2.0 (there was no real 1.0+)</li>
+                        <li>HTML was a language created at the dawn of the Web, using SGML (Standard Generalized Markup Language) as a template</li>
+                        <li>Over the next decade, various additions, improvements and changes are introduced</li>
+                        <li><a href="https://www.w3.org/TR/1999/REC-html401-19991224/">HTML 4.01</a> released in December 1999</li>
+                        <li>Initially used for documents and a place for the technically inclined, the web did not have the international pervasiveness it does today</li>
+                        <li>Most developers were new to the language and there were no real classes in it</li>
+                        <li>People had to learn as they went along</li>
+                        <li>A lot of early sites are poorly designed</li>
+                
+                    </ul>
+                                <h4>HTML 4.01 template</h4>
+                            <textarea style="width:90%;height:170px;" rows="10" cols="50">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                   "http://www.w3.org/TR/html4/loose.dtd"&gt;
+                &lt;html&gt;
+                    &lt;head&gt;
+                        &lt;title&gt;&lt;/title&gt;
+                        &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                    &lt;/body&gt;
+                &lt;/html&gt;
+                </textarea>
+                    <p>The problem with the state of HTML then was its reputation as a loose language. Poorly structured code would be rendered differently across user agents, leading to forked code and less predictable results.</p>
+                </div>
+                
+                
+                <h2 id="xhtml">XHTML</h2>
+                <div class="contblock">
+                <p>The <a href="https://www.w3.org/TR/2002/REC-xhtml1-20020801/">XHTML specification</a> was the result of rewriting  <a href="https://www.w3.org/TR/1999/REC-html401-19991224/">HTML 4.01</a> using the ruleset derived from <a href="https://www.w3.org/XML/">XML</a></p>
+                <ul>
+                    <li>HTML 4.01 + XML = XHTML 1.0</li>
+                    <li>X = eXtensible</li>
+                    <li>X = XML related</li>
+                    <li>Better, more predictable coding patterns.</li>
+                    <li>Verifiable or "well-formed" code can be produced.</li>
+                    <li>Forces a higher standard of HTML.</li>
+                    <li>Predictable behavior across user agents.</li>
+                    <li>Porting to HTML5 is easy (if you also observe <strong>semantic</strong> guidelines).</li>
+                </ul>
+                
+                <h3>XHTML Rules:</h3>
+                
+                <ul>
+                <li>All elements must be properly nested
+                <ul>
+                    <li>This is not valid: <code>&lt;p&gt;&lt;b&gt;Bolded Text&lt;/p&gt;&lt;/b&gt;</code></li>
+                    <li>This can be a problem with things like Lists &lt;ol&gt; and &lt;ul&gt;.</li>
+                
+                    <li>Especially when closing the List Item &lt;li&gt; tag that contains the &lt;ul&gt; or &lt;ol&gt; tag.</li>
+                </ul></li>
+                
+                <li>All tags must close
+                <ul>
+                    <li>Example: <code>&lt;p&gt;Some text here&lt;/p&gt;</code></li>
+                
+                    <li>Empty Elements are closed as well: <code>&lt;br /&gt;</code> or <code>&lt;img src="#" /&gt;</code></li>
+                    <li>An extra space is required before the slash to work with all browsers.</li>
+                </ul></li>
+                
+                <li>All tag names must be in lower case
+                <ul>
+                    <li><code>&lt;Img Src="some_image.gif"&gt;</code> is not valid</li>
+                
+                </ul></li>
+                
+                <li>Attribute names are always in lower case
+                <ul>
+                    <li><code>&lt;p ALIGN="center"&gt;</code> should be  <code>&lt;p align="center"&gt; </code></li>
+                </ul></li>
+                
+                <li>All attributes must be quoted
+                <ul>
+                    <li><code>&lt;body bgcolor=black&gt;</code> will not work, you need: <code>&lt;body bgcolor="black"&gt;</code></li>
+                
+                </ul></li>
+                
+                <li>Attributes cannot be minimized
+                <ul>
+                    <li><code>&lt;input type="checkbox" checked&gt;</code> cannot be used. The valid code is: <code>&lt;input type="checkbox" checked="checked" /&gt;</code></li>
+                </ul></li>
+                
+                
+                <li>Name Attribute is no longer used (except with forms). Replace "name" with "id".
+                <ul>
+                    <li><code>&lt;img src="picture.gif" name="myimage" /&gt;</code> will not validate. Use <code>id="myimage"</code> instead.</li>
+                
+                </ul></li>
+                
+                
+                <li>Mandatory Elements: Every XHTML document <strong>must have</strong> these elements: 
+                <ul>
+                    <li><code>&lt;html&gt;</code></li>
+                
+                    <li><code>&lt;head&gt;</code></li>
+                    <li><code>&lt;title&gt;</code></li>
+                    <li><code>&lt;body&gt;</code></li>
+                    <li>The <code>&lt;!DOCTYPE&gt;</code> declaration <em>must</em> be there, but it is <em>part</em> of the document itself rather than an element of the document.</li>
+                
+                </ul></li>
+                
+                
+                <li>Documents must be well-formed
+                <ul>
+                    <li>The document must conform to all of the above rules</li>
+                </ul></li>
+                <li>Optional XML declaration
+                <ul>
+                    <li>Not <em>required</em>, but good practice:</li>
+                
+                    <li><code>&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;</code></li>
+                </ul></li>
+                
+                <li>Optional Element: An XHTML document should also declare the type and character encoding in the head section to ensure the server sends the correct content-type header: <br>
+                <code>&lt;meta http-equiv="Content-Type" content="text/html" charset="UTF-8"&gt;</code>
+                </li>
+                
+                </ul>
+                
+                    <h3>XHTML 1.0 template</h3>
+                    <textarea style="width:90%;height:170px;" rows="10" cols="50">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+                &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+                    &lt;head&gt;
+                        &lt;title&gt;&lt;/title&gt;
+                        &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                    &lt;/body&gt;
+                &lt;/html&gt;
+                </textarea>
+                </div>
+                    
+                <h2 id="html5">HTML5</h2>
+                <div class="contblock">
+                    <p>As of October 28, 2014, <a href="http://www.w3.org/TR/html5/">HTML5 is the official W3C recommendation</a></p>
+                    <p>HTML5 is more evolutionary then revolutionary. The bulk of previous HTML elements and attributes are maintained, with a few deprecations, and several additions.</p>
+                
+                    <p>Significant features include:</p>
+                        <ul>
+                            <li>Ultra simple Doctype: <code>&lt;!DOCTYPE html&gt;</code></li>
+                            <li>Specifies how browsers should behave with imperfect code</li>
+                            <li>Ability to embed <a href="https://www.w3.org/XML/">XML</a>, <a href="http://www.w3.org/Math/">MathML</a> or <a href="http://www.w3.org/Graphics/SVG/">SVG</a> markup.</li>
+                            <li>Standardized Javascript API increases client side script compatibility across browsers</li>
+                            <li>Backwards compatible - older versions of HTML can effectively be updated by simply changing the doctype to HTML5</li>			
+                            <li>Guiding principles: Enhance semantic coding, Support existing content, Pave the cowpaths</li>
+                        </ul>
+                
+                    <h3>HTML 5 template</h3>
+                <textarea style="width:90%;height:170px;" rows="10" cols="50">&lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                    &lt;head&gt;
+                        &lt;title&gt;&lt;/title&gt;
+                        &lt;meta charset="utf-8" /&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                    &lt;/body&gt;
+                &lt;/html&gt;
+                </textarea>	
+                    </div>
+                
+                <h2>Paving the Cowpaths</h2>
+                <div class="contblock">
+                
+                    <p>Common developer practices have been simplified</p>
+                    <ul>
+                        <li>Finally a DOCTYPE we can all remember:<br>
+                            <code>&lt;!DOCTYPE html&gt;</code>
+                        </li>
+                        <li>Declaring the character encoding is easier:<br>
+                            <code>&lt;meta charset="utf-8" /&gt;</code>
+                        </li>
+                        <li>When linking to external stylesheets the <code>type</code> attribute is not required:<br>
+                            <code>&lt;link rel="stylesheet" href="style.css" /&gt;</code>
+                        </li>
+                        <li>When embedding CSS the <code>type</code> attribute is not required:<br>
+                            <code>&lt;style&gt;&lt;/style&gt;</code>
+                        </li>
+                        <li>Including javascripts is simplified as well (<code>type</code> attribute is not required)<br>
+                            <code>&lt;script src="javascripts.js"&gt;&lt;/script&gt;</code>
+                        </li>
+                    </ul>
+                </div>
+                
+                <h2 id="semantics">HTML5: Enhanced Semantic Coding</h2>
+                <div class="contblock">
+                    <p>It is crucial for all HTML content to be <a href="https://en.wikipedia.org/wiki/Semantic_HTML">semantically marked up</a>. This is how browsers, search engines, and screen readers make sense of online content.</p>
+                    <p>HTML5 provides more than just adjustments to the markup, there are new, powerfully semantic elements:</p>
+                        <ul>
+                            <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section">&lt;section&gt;</a></code> is a tag representing a document or application section. in general, if you are planning to use a heading, start a new <code>section</code>. a <code>section</code> must contain a heading, and may contain <code>article</code>(s), possibly <code>aside</code>s or even sub-<code>section</code>s</li>
+                            <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article">&lt;article&gt;</a></code> is an independent piece of content in a document (it could stand alone if removed from the page). an <code>article</code> might be a blog post, forum thread, news story, collection of product information, etc</li>
+                            <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside">&lt;aside&gt;</a></code> is for content "only slightly" related to the main page content. <code>aside</code>s fill the role of a sidebar. if the content could be removed without reducing the meaning of the main content of the HTML document, then use an <code>aside</code></li>
+                            <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header">&lt;header&gt;</a></code> and <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer">&lt;footer&gt;</a></code> are for the header or footer of a page</li>
+                            <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav">&lt;nav&gt;</a></code> represents an area for navigation</li>
+                            <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main">&lt;main&gt;</a></code> used for containing content that is focused on the central topic of the page. this content is usually unique to the page, and not shared by other pages (main will usually NOT contain navigations, footers, sidebars, etc)</li>
+                            <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure">&lt;figure&gt;</a></code> will likely contain an <code>img</code> or graphic. self-contained content (could usually be removed from the page and stand on its own). allows for captioning of embedded content like an image graphic or video. use only for figures that are discussed in the text of the page, do not use for images that are not related to the theme/topic of the page. be sure to include a descriptive <code>figcaption</code> child</li>
+                            <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption">&lt;figcaption&gt;</a></code> used as first or last child of <code>figure</code> to define the caption or legend for a figure</li>
+                
+                
+                            
+                        </ul>	
+                
+                    <p>These represent some big changes in HTML, allowing for more flexibility in coding and specifying content. Many of these will replace and reduce the need for many <code>div</code> tags. eg: instead of the typical <code>&lt;div id="header"&gt;</code>, use <code>&lt;header&gt;</code>.</p>
+                    <p>Having trouble deciding which tag to use for what content? Try this <a href="http://html5doctor.com/downloads/h5d-sectioning-flowchart.pdf">HTML5 flowchart</a>.</p>
+                </div>
+                
+                
+                <h2>HTML5 Semantic Alterations</h2>
+                <div class="contblock">
+                <p>HTML5 also brings a few notable semantic alterations to older tags:</p>
+                <ul>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">&lt;a&gt;</a></code> though still an inline tag, it is now ok to nest multiple block level tags (headings, paragraphs etc) inside an anchor tag</li>
+                    <li><code><a href="https://developer.mozilla.org/en/docs/Web/HTML/Element/small">&lt;small&gt;</a></code> no longer a 'physical' tag for smaller sized print, it now has semantic value: meaning 'small print', i.e. 'legalese'. the <code>big</code> element has been deprecated</li>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/b">&lt;b&gt;</a></code> no longer means 'render bold'. now it means the text is 'stylisticly offset from the normal text', without conveying any extra importance. to convey extra importance, use <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong">&lt;strong&gt;</a></code></li>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/i">&lt;i&gt;</a></code> now means the text is 'in an alternate voice or mood', without conveying any extra emphasis. to convey extra emphasis, use <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em">&lt;em&gt;</a></code></li>
+                    <li>Deprecated tags: <code>&lt;big&gt;, &lt;font&gt;, &lt;strike&gt;</code>, and a few more. Developers should use CSS instead of these deprecated tags.</li>
+                    <li>Deprecated attributes: <code>align, bgcolor, border, height, size, type, width</code> and more. Developers should use CSS instead of these deprecated attributes.</li>		
+                    
+                </ul>
+                </div>
+                
+                <h2>HTML5 Content Models</h2>
+                <div class="contblock">
+                    <p>Pre-HTML5, there were basically two categories of tags: inline and block. HTML5 intoduces a more nuanced set of categories that allow for greater semantic sectioning of content. The content model will help the browser to determine the semantics of your content.</p>
+                    <h3>Content Models</h3>
+                    <ul>
+                        <li>text-level content: most inline tags</li>
+                        <li>grouping content: most block tags</li>
+                        <li>replaced content: all the form widgets (buttons, checkboxes, text inputs, etc)</li>
+                        <li>embedded content: video, audio, canvas</li>
+                        <li>sectioning content: new structural, semantic options</li>
+                    </ul>
+                    <h3>Sectioning Content</h3>
+                    <p>The <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section">&lt;section&gt;</a></code> tag can be used to semantically group content. It can remove ambiguity when a page is being processed by the browser, a screen reader, or search engine.</p>
+                    <p>For example, imagine you have created the following code:</p>
+                    <textarea style="width:90%;height:170px;" rows="10" cols="50">&lt;h1&gt;The Really Big Show&lt;/h1&gt;
+                &lt;h2&gt;Cities&lt;/h2&gt;
+                &lt;p&gt;We will be performing in several cities this year. Be sure to quit your job and travel the world to see all our shows!&lt;/p&gt;
+                &lt;h3&gt;Toronto&lt;/h3&gt;
+                &lt;p&gt;Center of the Canadian Universe.&lt;/p&gt;
+                &lt;h3&gt;Vancouver&lt;/h3&gt;
+                &lt;p&gt;On the left coast.&lt;/p&gt;
+                &lt;h3&gt;Tokyo&lt;/h3&gt;
+                &lt;p&gt;Land of the rising sun.&lt;/p&gt;
+                &lt;small&gt;Accommodations not provided&lt;/small&gt;
+                    </textarea>
+                    <p>Since content that follows a heading is presumed to be associated with that heading, the code above carries plenty of semantic value already. But, if the <code>small</code> tag's content is intended to apply to all cities, a browser has no way of knowing that. It will instead assume the <code>small</code> tag is associated with the preceding heading (<code>&lt;h3&gt;Tokyo&lt;/h3&gt;</code>)</p> Use the <code>section</code> tag to explicitly demarcate the start and end of the related content:<p></p>
+                    <textarea style="width:90%;height:230px;" rows="10" cols="50">&lt;h1&gt;The Really Big Show&lt;/h1&gt;
+                &lt;section&gt;
+                    &lt;h2&gt;Cities&lt;/h2&gt;
+                    &lt;p&gt;We will be performing in several cities this year. Be sure to quit your job and travel the world to see all our shows!&lt;/p&gt;
+                    &lt;h3&gt;Toronto&lt;/h3&gt;
+                    &lt;p&gt;Center of the Canadian Universe.&lt;/p&gt;
+                    &lt;h3&gt;Vancouver&lt;/h3&gt;
+                    &lt;p&gt;On the left coast.&lt;/p&gt;
+                    &lt;h3&gt;Tokyo&lt;/h3&gt;
+                    &lt;p&gt;Land of the rising sun.&lt;/p&gt;
+                &lt;/section&gt;
+                &lt;small&gt;Accommodations not provided&lt;/small&gt;
+                    </textarea>
+                    <p>This new sectioning will inform the browser that the <code>small</code> is associated with the <code>h1</code></p>
+                    <p>In HTML5, each piece of sectioned content has its own self-contained outline. This means you wont need to worry as much about which level heading tag to use. You can use an <code>h1</code> inside a section and it will be treated as the heading of the section, and have lesser semantic impact than an <code>h1</code> that is at a higher level.</p>
+                    <textarea style="width:90%;height:300px;" rows="10" cols="50">&lt;h1&gt;The Really Big Show&lt;/h1&gt;
+                &lt;section&gt;
+                    &lt;h1&gt;Cities&lt;/h1&gt;
+                    &lt;p&gt;We will be performing in several cities this year. Be sure to quit your job and travel the world to see all our shows!&lt;/p&gt;
+                    &lt;section&gt;
+                        &lt;h1&gt;Toronto&lt;/h1&gt;
+                        &lt;p&gt;Center of the Canadian Universe.&lt;/p&gt;
+                    &lt;/section&gt;
+                    &lt;section&gt;
+                        &lt;h1&gt;Vancouver&lt;/h1&gt;
+                        &lt;p&gt;On the left coast.&lt;/p&gt;
+                    &lt;/section&gt;
+                    &lt;section&gt;
+                        &lt;h1&gt;Tokyo&lt;/h1&gt;
+                        &lt;p&gt;Land of the rising sun.&lt;/p&gt;
+                    &lt;/section&gt;
+                &lt;/section&gt;
+                &lt;small&gt;Accommodations not provided&lt;/small&gt;
+                    </textarea>
+                
+                </div>
+                
+                
+                <h2 id="forms">Forms</h2>
+                <div class="contblock">
+                    
+                    <p>HTML 5 adds several new <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">form attributes</a> that prove quite useful, even if some are as yet poorly supported.</p>
+                    
+                    <ul>
+                        <li><code>placeholder="value"</code>: prepopulates field with data</li>
+                        <li><code>autofocus="autofocus"</code>: sets the input to have cursor focus</li>
+                        <li><code>required="required"</code>: ensures field is filled in before submission</li>
+                        <li>There are also several new <code>&lt;input&gt;</code> type attribute variants:
+                            <ul>
+                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/email">type="email"</a></li>
+                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/url">type="url"</a></li>
+                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date">type="date"</a></li>
+                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel">type="tel"</a></li>				
+                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/color">type="color"</a></li>
+                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range">type="range"</a></li>
+                            </ul>
+                        </li>
+                </ul>
+                </div>
+                
+                <h2 id="svg">Scaleable Vector Graphics</h2>
+                <div class="contblock">
+                    <p><a href="http://www.w3.org/Graphics/SVG/">Scaleable Vector Graphics (SVG)</a> can be embedded into HTML5 documents. SVG are 100% scalable without the pixelated effect that scaled raster images can suffer from. SVG file data is stored as text, so they are much smaller in file size than a raster equivalent.</p>
+                
+                    <p>You can use SVG graphics with the <code>img</code> tag, just as with raster graphics. You can also use .svg as a CSS <code>background-image</code>.	</p>
+                    <pre><code>&lt;img src="images/logo.svg" alt="COMP 1950 logo" /&gt;</code></pre>
+                <p>The <code>png</code> on the left is 26KB. The <code>.svg</code> on the right is only 4KB.</p>	
+                    <img style="float:left;margin-right:50px;" src="images/comp1950_logo.png">
+                    <img src="images/comp1950_logo.svg">
+                    
+                    <p>Alternatively, you can use SVG code 'inline' with the <code>svg</code> tag. The advantage of doing this is it will result in one less request/response between the client and the server. The disadvantage to inline SVG is that it adds considerable clutter to your your <code>.html</code> code. Just copy the source code from your <code>.svg</code> file and paste it directly into your <code>.html</code>!</p>
+                    <pre><code>&lt;svg viewBox="0 0 55 28"&gt;
+                    &lt;!-- svg code goes here... sometimes there is a LOT of code here! --&gt;
+                &lt;/svg&gt;</code></pre>
+                    
+                <h4>SVG Tools</h4>
+                <p>Use an SVG application to help you create and manipulate your SVG code. </p>
+                <ul>
+                    <li><a href="http://www.adobe.com/ca/products/illustrator.html">Adobe Illustrator</a></li>
+                    <li><a href="https://inkscape.org/en/">Inkscape</a> (Open source, Windows/Mac/Linux)</li>
+                    
+                </ul>
+                </div>
+                
+                <h2 id="multimedia">Multimedia</h2>
+                <div class="contblock">
+                    <p>HTML5's more responsive multimedia features have made it easier to provide appropriately formatted video and audio to the client.</p>
+                    <h3>Audio</h3>
+                    <p>The <a href="https://developer.mozilla.org/en/docs/Web/HTML/Element/audio">audio</a> element provides a way to offer many audio formats to the client, allowing the browser to choose the one most suitable.</p>
+                    <p>The most common audio formats for the web are: <code>audio/mp3</code>, <code>audio/mpeg</code> and <code>audio/ogg</code>.</p>
+                    <h4>Each audio tag may contain:</h4>
+                    <ul>
+                        <li><code>source</code> tags as children of the <code>audio</code> tag, one for each audio format available. Each <code>source</code> must have a <code>src</code> (path to audio file) and <code>type</code> (audio file MIME type)</li>
+                        <li><code>controls="controls"</code> give the user control over the audio *important for usability*</li>
+                        <li><code>loop="loop"</code> loop audio playback</li>
+                        <li><code>muted="muted"</code> begin with audio silenced</li>
+                        <li><code>preload="none"</code> dont load the audio until the user clicks 'play', <code>preload="metadata"</code> preloads the clip duration statistic only, <code>preload="auto"</code> loads the audio clip to the client before they click 'play'</li>
+                        <li><code>autoplay="autoplay"</code> begin playing audio as soon as page is loaded *NOT very user friendly*</li>
+                        <li>you may also wish to include a direct link for your users to download the file</li>
+                    </ul>
+                <pre><code>&lt;audio controls="controls"&gt;
+                    &lt;source src="media/house-a-square.mpg" type="audio/mpeg" /&gt;
+                    &lt;source src="media/house-a-square.mp3" type="audio/mp3" /&gt;
+                    &lt;source src="media/house-a-square.ogg" type="audio/ogg" /&gt;
+                &lt;/audio&gt;</code></pre>
+                          <audio controls="controls">
+                            <source src="http://bcitcomp.ca/1950/media/house-a-square.mp3" type="audio/mpeg">
+                            <source src="http://bcitcomp.ca/1950/media/house-a-square.ogg" type="audio/ogg">
+                          </audio>
+                             <p><a href="http://bcitcomp.ca/1950/media/house-a-square.mp3">Download the audio</a></p>	
+                
+                <h3>Video</h3>
+                <p>The <a href="https://developer.mozilla.org/en/docs/Web/HTML/Element/video">video</a> element provides a way to offer many video formats to the client, allowing the browser to choose the one most suitable.</p>	
+                <p>The most common video formats for the web are: <code>video/mp4</code>, <code>video/ogg</code> and <code>video/webm</code>.</p>
+                <h4>Each video tag may contain:</h4>
+                <ul>
+                    <li><code>source</code> tags as children of the <code>video</code> tag, one for each video format available. Each <code>source</code> must have a <code>src</code> (path to video file) and <code>type</code> (video file MIME type)</li>
+                    <li><code>controls="controls"</code> give the user control over the video playback *important for usability*</li>
+                    <li><code>width="250" height="100"</code> set the size of the video (use CSS instead. absolute values only, no percentages)</li>
+                    <li><code>poster="image.jpg"</code> display a static image when the video is not playing</li>
+                    <li><code>loop="loop"</code> loop playback</li>
+                    <li><code>muted="muted"</code> begin with audio silenced</li>
+                    <li><code>preload="none"</code> dont load the video until the user clicks 'play', <code>preload="metadata"</code> preloads the clip duration statistic only, <code>preload="auto"</code> loads the clip to the client before they click 'play'</li>
+                    <li><code>autoplay="autoplay"</code> begin playing video as soon as page is loaded *NOT very user friendly*</li>
+                    <li>you may also wish to include a direct link for your users to download the file</li>			
+                </ul>
+                <pre><code>&lt;video 	preload="none" 
+                    controls="controls" 
+                    poster="media/poster-bear-in-water.jpg"&gt;
+                    
+                    &lt;source src="media/bear-in-water.webm" type="video/webm" /&gt; 
+                    &lt;source src="media/bear-in-water.mp4" type="video/mp4" /&gt;
+                    &lt;source src="media/bear-in-water.ogg" type="video/ogg" /&gt;
+                &lt;/video&gt;	</code></pre>		
+                          <video preload="none" controls="" width="355" height="200" poster="http://bcitcomp.ca/1950/media/poster-bear-in-water.jpg">
+                            <source src="http://bcitcomp.ca/1950/media/bear-in-water.webm" type="video/webm"> 
+                            <source src="http://bcitcomp.ca/1950/media/bear-in-water.mp4" type="video/mp4">
+                          </video>	
+                          <p><a href="http://bcitcomp.ca/1950/media/bear-in-water.mp4">Download the video</a></p>
+                
+                <h3>Format Conversion</h3>		  
+                <p>There are several tools available for creating the required audio and video formats. Some are online and free to use.</p>
+                <ul>
+                    <li><a href="https://www.media.io/audio-converter.html">Media.io Audio Converter</a> (use to make <code>audio/mp3</code>, <code>audio/mpeg</code> and <code>audio/ogg</code> formats)</li>
+                    <li><a href="https://www.media.io/video-converter.html">Media.io Video Converter</a> (use to make <code>video/mp4</code>, <code>video/ogg</code> and <code>video/webm</code> formats)</li>
+                </ul>
+                </div>
+                
+                <h2>HTML5 Today</h2>
+                <div class="contblock">
+                <p>User agent browsers will have varying support for the HTML5 specification.</p>
+                <ul>
+                    <li><a href="https://caniuse.com/">caniuse.com</a> is an excellent source for compatibility testing</li>
+                    <li>Try the <a href="http://html5test.com/">HTML5Test</a> to test a specific browser.</li>
+                    
+                        
+                    <li>Since HTML5 understands both HTML4 and XHTML tags, converting an older HTML file into HTML5 is simply a matter of updating the DOCTYPE and meta tag for charset.</li>
+                </ul>
+                </div>
+                
+                
+                <h2 id="todo">To Do</h2>
+                <div class="contblock">
+                    <ul>
+                    <li>Download, review, and complete the homework assignment from <a href="https://learn.bcit.ca/">D2L</a></li>
+                    <li>Review the <a href="#semantics">HTML5 semantic tags</a>, know how and when to use them to maxmize the semantic strucure of your HTML</li>	
+                    </ul>
+                    <p>Session #3's quiz will be written, closed book</p>
+                </div>
+        </main>
+        <!--This div is the flex or grid container for the footer with the site map and the contact information, similar to the BCIT page-->
+	<div id="sitemap">
+            <ul id="footernav">
+                    <li id="fthome"> <a href="../../home.html"> Home</a> </li>
+                    <li id="ftabout"> <a href="../../about.html"> About</a> </li>		
+                    <li id="ftresources"> <a href="../../resources.html"> Resources</a> </li></ul>
+            </ul>
+            
+            <p id="footerinfo">
+            British Columbia Institute of Technology <br>
+                3700 Willingdon Avenue <br>
+                Burnaby, British Columbia <br>
+                Canada V56 3H2 <br>
+                Telephone: 604-434-5734<br>
+                Toll-free (Canada/US): 1-866-434-1610
+        </p>
+        </div>
+        
+        <footer> &copy; 2019 British Columbia Institute of Technology. All rights reserved.</footer>
+    </div>
+</body>
+
+</html>
