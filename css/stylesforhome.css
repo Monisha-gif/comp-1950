@@ -1,8 +1,8 @@
 
-	/* styles for printers */
+	/* styles for printers contributed by Avreet Singh, modified by Monisha Ravindra*/
 	@media print { 
 	
-		header, nav, .site_map_link, #search_form{
+		#short_nav, #search_field, img {
 			display: none;}
 	
 		body, #content, main, footer  {
@@ -15,6 +15,7 @@
 		h2, h2, h4, h5, h6{ 	
 			page-break-after: avoid;
 	}
+		:any-link:after {content: "(url:"attr(href)")"}
 	}
 	section, article{ 	page-break-before: always;	}
 	body, #content, , main, footer {
