@@ -322,15 +322,15 @@ footer {
 		justify-self: left;		
 	}
 
-	header nav ul {
+	header nav > ul {
 		flex-direction: column;
 	}
 
-	header nav ul li {
+	header nav > ul > li {
 		text-align: center;
 	}
 
-	header nav ul li a {
+	header nav > ul > li a {
 		font-size: 20px;
 		padding: 10px;			
 	}	
@@ -339,7 +339,14 @@ footer {
 		visibility: visible;
 		position: unset;
 		flex-wrap: nowrap;
-		height: unset;		
+		overflow: scroll;		
+	}
+
+	#logocard {
+		position: unset;
+		width: 100%;
+		transform: none;
+		height: auto;
 	}
 
 	#sitemap {		
