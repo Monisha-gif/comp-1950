@@ -43,7 +43,7 @@ function headerClicked(tag) {
     hideAll();        
     tag.addClass("visible"); //just used for highlighting the open h2
     tag.next().addClass("visible");  
-    tag.next().css("max-height", sumHeightOfChildren(tag));
+    tag.next().css("max-height", sumHeightOfChildren(tag.next()));
 }
 
 $(document).ready(function() {

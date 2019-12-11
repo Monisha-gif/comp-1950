@@ -2,17 +2,16 @@
 
 h2 {
     color: white;
-    background-color: blue;
+    background-color: #003c71;
     transition: 0.5s;  
     margin: 0;
     margin-top: 10px;
     padding: 10px;
-    border: 1px solid gray;
-    box-shadow: 5px 0px 5px gray;
+    border: 1px solid gray;    
 }
 
 h2:hover {
-    background-color: lightblue;
+    background-color: #57a1ff;
 }
 
 h2.visible {
@@ -31,7 +30,6 @@ Apparently, if you use the height, it would affect its children too.
 }
 
 div.visible {    
-    border: 1px solid gray;
-    box-shadow: 5px 5px 5px gray;
+    border: 1px solid gray;    
     padding: 5px;
 }
