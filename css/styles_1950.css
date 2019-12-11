@@ -42,9 +42,9 @@ header nav {
 
 header nav ul {
 	display: flex;	
-	flex-direction: row;
-	padding: 10px;
+	flex-direction: row;	
 	margin: 0;
+	padding: 0;
 }
 
 header nav ul ul {
@@ -167,9 +167,10 @@ header nav ul li {
 	list-style-type:none;
 }
 header nav ul li a {
-	padding: 10px;
+	padding: 10px 10px;
 	color: white;
 	text-decoration: none;	
+	display:block;
 }
 header nav ul li a:hover {
 	font-weight: bold;
@@ -272,8 +273,76 @@ footer {
 	text-align: center;
 }
 
-@media print {
-	nav {
-		visibility: hidden;
+@media screen and (max-width: 1024px)
+{
+	#wrap {
+		width: 100%;
+	}
+
+	#card_layout, #card_layout2, #card_layout3 {		
+		grid-template-columns: 1fr 1fr;
+	}
+
+	header nav ul ul {		
+		width: 100%;		
+		left: 0;
+		top: 150px;
+		left: 0;	
+		height: 300px;
+	}
+}
+
+@media screen and (max-width: 740px)
+{
+	#wrap {
+		width: 100%;
+	}
+
+	#card_layout, #card_layout2, #card_layout3, #card_layout31 {		
+		grid-template-columns: 1fr;
+	}
+
+	#wrap {
+		padding-top: 0;
+	}
+
+	header {		
+		grid-template-areas: "logo   title"							 
+							 "search search"
+							 "nav    nav";
+		height: unset;
+		position: unset;
+	}
+
+	header #search_field, header nav {
+		justify-self: center;
+	}
+
+	header h1 {
+		justify-self: left;		
+	}
+
+	header nav ul {
+		flex-direction: column;
+	}
+
+	header nav ul li {
+		text-align: center;
+	}
+
+	header nav ul li a {
+		font-size: 20px;
+		padding: 10px;			
+	}	
+
+	header nav ul ul {
+		visibility: visible;
+		position: unset;
+		flex-wrap: nowrap;
+		height: unset;		
+	}
+
+	#sitemap {		
+		grid-column-gap: 10px;		
 	}
 }
